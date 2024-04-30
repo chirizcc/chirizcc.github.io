@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>云卷云舒</title><link>https://chirizcc.cc/</link><description>MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description><generator>Hugo 0.125.4 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>chirizcc@gmail.com (chirizcc)</managingEditor><webMaster>chirizcc@gmail.com (chirizcc)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Tue, 30 Apr 2024 10:56:00 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://chirizcc.cc/rss.xml"/><item><title>Ollama 部署本地大语言模型</title><link>https://chirizcc.cc/posts/ollama-%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</link><guid isPermaLink="true">https://chirizcc.cc/posts/ollama-%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</guid><pubDate>Tue, 30 Apr 2024 15:29:53 +0800</pubDate><author>chirizcc@gmail.com (chirizcc)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h1 id="1-简介">1. 简介&lt;/h1>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>云卷云舒</title><link>https://chirizcc.cc/</link><description>MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description><generator>Hugo 0.125.4 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>chirizcc@gmail.com (chirizcc)</managingEditor><webMaster>chirizcc@gmail.com (chirizcc)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Tue, 30 Apr 2024 13:33:54 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://chirizcc.cc/rss.xml"/><item><title>Ollama 部署本地大语言模型</title><link>https://chirizcc.cc/posts/ollama-%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</link><guid isPermaLink="true">https://chirizcc.cc/posts/ollama-%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</guid><pubDate>Tue, 30 Apr 2024 15:29:53 +0800</pubDate><author>chirizcc@gmail.com (chirizcc)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h1 id="1-简介">1. 简介&lt;/h1>
 &lt;p>&lt;a href="https://github.com/jmorganca/ollama">Ollama&lt;/a> 是一个基于 Go 语言开发的简单易用的本地大语言模型运行框架，可一键部署如 Llama 3, Mistral, Gemm 等大型语言模型。可以将其类比为 Docker，事实上它也的确制定了类 Docker 的一种模型应用标准。&lt;/p>
 &lt;h1 id="2-安装">2. 安装&lt;/h1>
 &lt;p>Olloma 有提供了各个平台的客户端，但是我更喜欢将其安装在 Docker 中。&lt;/p>
@@ -56,10 +56,10 @@
 &lt;p>直接使用下 Meta 最新开源的 &lt;a href="https://github.com/meta-llama/llama3">Llama3&lt;/a>&lt;/p>
 &lt;pre tabindex="0">&lt;code>ollama run llama3
 &lt;/code>&lt;/pre>&lt;p>Ollama 在拉取完成模型后，便会直接运行模型，会默认进入交互状态&lt;/p>
-&lt;p>&lt;img src="http://chiricdn.zhangdc.com/assets/202404270101311.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://pichub.zhangdc.com/202404270101311.png" alt="">&lt;/p>
 &lt;p>这里使用的是 Llama3 8B 模型，在我 RTX 2080 8GB 的 GPU 上运行的还是很快。Llama3 还有参数量更为庞大的 70B 模型，这个以我 GPU 的算力就几乎无法运行了。&lt;/p>
 &lt;p>在与大模型的交互框里输入 &lt;code>/?&lt;/code> 便可看到该界面的命令说明&lt;/p>
-&lt;p>&lt;img src="http://chiricdn.zhangdc.com/assets/202404270113588.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://pichub.zhangdc.com/202404270113588.png" alt="">&lt;/p>
 &lt;p>可以看到可以通过命令来设置 session 变量、查看模型信息、保存对话等，也允许通过 &lt;code>&amp;quot;&amp;quot;&amp;quot;&lt;/code> 来输入多行文件。输入 &lt;code>/bye&lt;/code> 便可退出交互。&lt;/p>
 &lt;pre tabindex="0">&lt;code>curl http://localhost:11434/api/chat -d &amp;#39;{
 &amp;#34;model&amp;#34;: &amp;#34;llama3&amp;#34;,
